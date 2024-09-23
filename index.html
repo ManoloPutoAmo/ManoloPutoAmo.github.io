@@ -1,100 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soy la puta hostia</title>
-    <style>
-        /* Estilos para el fondo */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0);
-            background-size: 600% 600%;
-            animation: backgroundAnimation 10s ease infinite;
-            overflow: hidden;
-        }
-
-        /* Animación de fondo */
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Estilo del texto */
-        h1 {
-            font-family: 'Arial', sans-serif;
-            font-size: 4em;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            animation: textAnimation 2s ease-in-out infinite;
-            cursor: pointer;
-        }
-
-        /* Animación del texto */
-        @keyframes textAnimation {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        /* Efecto de brillo */
-        h1:hover {
-            animation: glow 1s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+<html lang="es" dir>
+    <head>
+        <meta charset="UTF-8">
+        <title>Soy la puta hostia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            /* Estilos para el fondo */
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0);
+                background-size: 600% 600%;
+                animation: backgroundAnimation 10s ease infinite;
+                overflow: hidden;
             }
-            to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1 id="epicText">TONTO EL QUE LO LEA</h1>
+        </style>
+    </head>
+    <body>
+        <h1>Pruebas</h1>
+    </body>
 
-    <script>
-        // Efecto de cambio de color de texto al hacer clic
-        document.getElementById('epicText').addEventListener('click', function() {
-            this.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
-        });
-
-        // Animación de letras flotantes
-        function createFloatingLetters() {
-            const text = document.getElementById('epicText').textContent;
-            document.getElementById('epicText').textContent = '';
-            for (let char of text) {
-                const span = document.createElement('span');
-                span.textContent = char;
-                span.style.position = 'relative';
-                span.style.display = 'inline-block';
-                span.style.animation = `floatAnimation ${Math.random() * 5 + 3}s ease-in-out infinite`;
-                document.getElementById('epicText').appendChild(span);
-            }
-        }
-
-        // Animación de flotación
-        createFloatingLetters();
-
-        // CSS para la animación de flotación
-        const styleSheet = document.createElement('style');
-        styleSheet.type = 'text/css';
-        styleSheet.innerText = `
-            @keyframes floatAnimation {
-                0% { transform: translateY(0); }
-                50% { transform: translateY(-20px); }
-                100% { transform: translateY(0); }
-            }
-        `;
-        document.head.appendChild(styleSheet);
-    </script>
-</body>
-</html>
+    </html>
