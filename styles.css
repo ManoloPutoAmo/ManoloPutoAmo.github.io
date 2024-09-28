@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Sans";
+    src: url('fonts/vt323-latin-400-normal.woff') format('woff');
+}
+
+/* Estilos para el fondo */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    height: 100vh;
+    background: #141212;
+    background-size: 200% 200%;
+    animation: backgroundAnimation 10s ease infinite;
+    overflow: hidden;
+}
+
+/* Estilo del texto */
+#dev-title {
+    color: #9df58c;
+    font-family: 'Sans';
+    font-size: 8vw;
+    letter-spacing: 0.1vw;
+    border-right: 0.1em solid #9df58c;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 16.9ch;
+    animation: typing 4s steps(31) 1s forwards, blink-caret 0.75s step-end infinite;
+    line-height: 1; /* Aumenta el line-height para evitar el corte */
+    height: auto; /* Permite que el texto crezca verticalmente */
+}
+
+/* Animación de escribir */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #9df58c; }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    #dev-title {
+        font-size: 5vw;
+        letter-spacing: 0.1vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #dev-title {
+        font-size: 6vw;
+        letter-spacing: 0.05vw;
+    }
+}
+
+/* Contenedor general */
+.container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: top; /* Centra el contenido horizontalmente */
+    align-items: top; /* Centra el contenido verticalmente */
+}
+
+/* Caja para el título */
+#dev-box-title {
+    display: flex;
+    justify-content: left; /* Alinea el texto al centro */
+    align-items: top; /* Centra verticalmente */
+    height: 17.5%;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
