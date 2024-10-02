@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ccc;
+}
+
+.typing-animation p {
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    /* Aquí iría la animación de typing */
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.rrss img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.technologies, .education, .experience {
+    border-top: 2px solid #ddd;
+}
